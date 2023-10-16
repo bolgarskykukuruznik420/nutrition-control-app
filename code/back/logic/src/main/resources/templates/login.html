@@ -1,10 +1,48 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-    <title>Getting Started: Serving Web Content</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progect1</title>
+
+    <!-- Bootstrap reboot (для сброса стилей) -->
+    <link rel="stylesheet" href="libs/bootstrap-reboot.min.css">
+
+    <!-- Bootstrap сетка -->
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+
+    <!-- Шрифты с Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Стили сайта -->
+    <link rel="stylesheet" href="css/registration.css">
 </head>
 <body>
-<p th:text="'Hello, ' + ${name} + '!'" />
+
+<nav class="navbar">
+    <div class="container">
+        <a href="/" class="navbar-brand">Главная</a>
+        <div class="navbar-wrap">
+            <ul class="navbar-menu">
+                <li><a href="/registration">Регистрация</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="main">
+    <div class="reg">
+        <h2>Вход</h2>
+        <form action="/submit" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <input type="submit" value="Войти">
+        </form>
+    </div>
+</div>
 </body>
 </html>

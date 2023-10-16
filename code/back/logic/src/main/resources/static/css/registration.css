@@ -108,3 +108,21 @@ body {
   font-stretch: normal;
   text-decoration: none;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.reg {
+    text-align: center;
+    padding: 20px;
+}
+
+.reg h2 {
+    margin-top: 0;
+}
+
